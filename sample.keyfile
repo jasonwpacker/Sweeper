@@ -1,0 +1,5 @@
+# Replace this comment with a single row:
+#   <server name>	ssh-rsa		<key>
+#
+# Get the key by running ssh-keyscan <server name>
+# rename the file "keyfile" and save
