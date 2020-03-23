@@ -7,4 +7,5 @@ successfully uploaded/downloaded to prevent them from being pulled down again
 and processed again
 * Add optional tagging feature to allow the same name to be assigned a new key value in the file
 name to differentiate it from previous downloads
-
+* Add unit testing
+* Design an installer script
