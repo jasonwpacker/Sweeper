@@ -1,10 +1,7 @@
 import sqlite3
 from pprint import pprint
-
-
-class Config():
-    def __init__(self, name):
-        self.name = name
+import os.path
+from os import path
 
 
 def get_command():
@@ -20,6 +17,12 @@ def get_command():
 
 
 def connect_db():
+    if not path.exists('./sweeper.db'):
+        conn = sqlite3.connect('./sweeper.db')
+        c = conn.cursor()
+        c.execute('create table sweeper (name text, server text, user text, passwd text, remote text, local text, action text, mask text)')
+        conn.commit()
+        conn.close()
     try:
         retval = sqlite3.connect('./sweeper.db')
         return retval
